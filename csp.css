@@ -1,0 +1,651 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    
+}
+#mainNav{
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+.nav-item{
+    color: #01AE9A;
+    font-weight: 500;
+    position: relative;
+}
+.logo{
+  height: 40px;
+  width: 40px;
+}
+.nav-item:hover, .nav-link.active{
+    color:#01AE9A;
+}
+@media (min-width: 911px)
+{
+    .nav-item::before
+    {
+        content:"";
+        position:absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 4px;
+        background-color: #01AE9A;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-item:hover::before, .nav-item.active::before
+    {
+        width: 100%;
+        visibility: visible;
+        
+    }
+} 
+
+.bg-container{
+    background-image: url(https://en.idei.club/uploads/posts/2023-06/1686354098_en-idei-club-p-green-medical-background-dizain-pinterest-3.jpg);
+    background-position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    background-attachment: fixed;
+}
+.head{
+  font-size: 60px;
+  position: relative;
+  animation: home linear;
+  animation-timeline: view();
+}
+@keyframes home{
+  from  {scale: 200%; }
+  to{scale: 20%; }
+}
+.text{
+    background-color: transparent;
+    height: 100%;
+    width: 100vh;
+    color: 		#ffffff;
+    padding: 40px;
+    text-shadow: 1px 1px 1px #c3c8c5;
+    margin-top: 180px;
+    position: inherit;
+}
+.image{
+    height: 87vh;
+    width: 100vh;
+}
+.image1{
+    height: 10px;
+}
+.bg-container{
+    width: 100%;
+}
+.head{
+    margin-bottom: 40px;
+}
+.abstractcontainer{
+    padding: 80px;
+    height: 100%;
+}
+.introcontainer{
+  padding: 80px;
+  height: 100%;
+}
+@keyframes fade-in{
+  from{scale: .8; opacity: 0;}
+  to{scale: 1; opacity: 5;} 
+}
+.commons{
+  animation: flyin linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 38%;
+}
+@keyframes flyin {
+  from{opacity: 0; scale: 10;}
+  to{opacity: 1; scale: 1;}
+}
+.commont{
+  animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start:0%;
+    animation-range-end: 35%;
+}
+.intro{
+  background-color:#01AE9A;
+    padding: 80px;
+    border-radius: 20px;
+}
+.abstract{
+    background-color:#01AE9A;
+    padding: 80px;
+    border-radius: 20px;
+    animation: scroll linear ;
+    animation-timeline: view();
+    animation-range: entry 0 cover 45%;
+}
+@keyframes scroll {
+  from{
+          opacity: 0;
+          clip-path: inset(100% 0 0 0);
+  }
+  to{
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+  }
+  
+}
+
+.abstracth{
+  position: inherit;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    color: #ffffff;
+    font-size: 100px; ;
+}
+.abstractp{
+    margin-left: 50%;
+    color: #ffffff;
+}
+.image{
+     height: 50%;
+     width: 100%;
+     border-radius: 10px;
+}
+.common{
+    width: 40%;
+    padding: 10px;
+    background-color: #ffffff;
+    height: 100%;
+    transition: background-color 0.3s ease ;
+    border-radius: 10px;
+  }
+.common:hover{
+    background-color: #01AE9A;
+    color: #ffffff;
+    box-shadow: 0 0 1100px rgba(33,33,33,.2); 
+    transform: scale(1.04);
+    transition: transform 0.5s ease;
+  }
+.brandedmedicene{
+    width: 40%;
+    margin-top: 20%;
+}
+.medicenes{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+}
+.gmp{
+    margin: 30px;
+}
+.gmh{
+    margin-top: 30px;
+}
+/* Global Styles */
+
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #01AE9A;
+  }
+  
+  /* Animation Effects */
+  
+  /* Hover Effect */
+ .table tr{
+    background-color: #ffffff;
+  }
+  
+ .table tr:hover td{
+    background-color: #01AE9A;
+    cursor:pointer;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+    transition: 0.3s ease-in-out;
+  }
+  /* Scroll Effect */
+  
+  table {
+    overflow-y: auto;
+    max-height: 500px; /* adjust the height to your needs */
+    position: relative;
+  }
+  table::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  table::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+  }
+  
+  table::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+  }
+  
+  /* Scroll Animation */
+  
+  table tr {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    position: inherit;
+  }
+  
+  table tr:nth-child(odd) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  table tr:nth-child(even) {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .tablecontainer{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .detailsc{
+    width: 50%;
+    display: flex;
+    justify-content:center ;
+    background-color: #01AE9A;
+    margin-left: 25%;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  #chartContainer {
+    width: 250px; /* Adjust the size here */
+    height: 250px; /* Adjust the size here */
+}
+#chartContainer1 {
+  width: 200px; /* Adjust the size here */
+  height: 200px; /* Adjust the size here */
+}
+#barcontainer{
+  width: 500px;
+  height:400px;
+}
+#barcontainer1{
+  width: 500px;
+  height:400px;
+}
+#barcontainer2{
+  width: 500px;
+  height:400px;
+}
+#barcontainer3{
+  width: 500px;
+  height:400px;
+}
+#donutcontainer{
+    width: 100px; /* Adjust the size here */
+    height: 100px; /* Adjust the size here */
+}
+
+#myPieChart1 {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.commonltr{
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #01AE9A;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  animation: appearltr  linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 45%;
+}
+.commonrtl{
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #01AE9A;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  animation: appearrtl  linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 45%;
+  }
+@keyframes appearltr {
+     from{
+      opacity: 0;
+      transform: translateX(-400px);
+     }  
+     to{
+      opacity: 1;
+      transform: translateX(0px);
+     }
+}
+@keyframes appearrtl {
+  from{
+   opacity: 0;
+   transform: translateX(400px);
+  }  
+  to{
+   opacity: 1;
+   transform: translateX(0px);
+  }
+}
+.pp{
+  margin-left: 10%;
+}
+.thegraphs{
+  padding: 100px;
+  flex-wrap: nowrap;
+}
+.using{
+  text-align: center;
+}
+.sideeffects{
+  text-align: center;
+}
+.recommend{
+  text-align: center;
+}
+
+.imagesholder{
+  display: flex;
+}
+.imagesholder1{
+  display: flex;
+}
+
+
+
+
+
+.column {
+  margin: 2%;
+  flex: 1 1 0;
+  position: relative;
+  padding: 1rem;
+  min-height: 33vh;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all ease-in-out .3s;
+  min-width: calc(33.33% / 2);
+}
+section:nth-of-type(5) .column:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 22px;
+}
+section:nth-of-type(6) .column:nth-of-type(2) {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 66px;
+}
+.column img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all ease-in-out .5s;
+}
+.column:hover {
+    color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+/* Color Overlay position */
+.column::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all ease-in-out .5s;
+}
+/* Removed effects to show original on hover */
+.column:hover::after, .column:hover, .column:hover img{
+  filter: none;
+  -webkit-filter: none;
+  mix-blend-mode: unset !important;
+  background: transparent;
+}
+
+/* COLORS */
+
+.green{
+  background-color: #00ff36;
+}
+.green img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(1.2);
+  filter: grayscale(100%) contrast(1);
+}
+.green::after{
+  background-color: #23278a;
+  mix-blend-mode: lighten;
+}
+
+.red-purple{
+  background-color: #e41c2d;
+}
+.red-purple img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(1);
+  filter: grayscale(100%) contrast(.8);
+}
+.red-purple::after{
+  background-color: #1d3162;
+  mix-blend-mode: lighten;
+}
+
+
+.retro{
+background-color: #f1e3a0;
+}
+.retro img{
+   mix-blend-mode: darken;
+  -webkit-filter: grayscale(100%) contrast(2);
+  filter: grayscale(100%) contrast(2);
+}
+.retro::after{
+  background: linear-gradient(180deg, #f430a9, #f2e782);
+  mix-blend-mode: lighten;
+}
+
+.vintage{
+  background-color: #caeaf2;
+}
+.vintage img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(1.5);
+  filter: grayscale(100%) contrast(1.5);
+}
+.vintage::after{
+  background-color: #2cd6e1;
+  mix-blend-mode: lighten;
+}
+
+.blue-light{
+  background-color: #181e59;
+}
+.blue-light img{
+   mix-blend-mode: lighten;
+  -webkit-filter: grayscale(100%) contrast(.8);
+  filter: grayscale(100%) contrast(.8);
+}
+.blue-light::after{
+  background-color: #E7E1A6;
+  mix-blend-mode: multiply;
+}
+
+.blue{
+  background-color: #77acd4;
+}
+.blue img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(1.2);
+  filter: grayscale(100%) contrast(1.2);
+}
+.blue::after{
+  background-color: #033dc5;
+  mix-blend-mode: lighten;
+}
+
+
+.dark-red{
+  background-color: #ed060b;
+}
+.dark-red img{
+    -webkit-filter: grayscale(100%) contrast(1.2);
+    filter: grayscale(100%) contrast(1.2);
+    mix-blend-mode: lighten;
+}
+.dark-red::after{
+   background-color: #70e4ee;
+   mix-blend-mode: multiply;
+}
+
+.flat-retro{
+  background-color: #FCA300;
+}
+.flat-retro img{
+   mix-blend-mode: darken;
+  -webkit-filter: grayscale(100%) contrast(1.5);
+  filter: grayscale(100%) contrast(1.5);
+}
+.flat-retro::after{
+   background-color: #e23241;
+  mix-blend-mode: lighten;
+}
+
+.teal{
+  background-color: #d7a621;
+}
+.teal img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(1.2);
+  filter: grayscale(100%) contrast(1.2);
+}
+.teal::after{
+  background-color: #0c6249;
+  mix-blend-mode: lighten;
+}
+
+.purple{
+  background-color: #88169d;
+}
+.purple img{
+  -webkit-filter: grayscale(100%) contrast(1.2);
+    filter: grayscale(100%) contrast(1.2);
+  mix-blend-mode: lighten;
+}
+.purple::after{
+  mix-blend-mode: hard-light;
+  background: linear-gradient(to top left, #75d775, #321a5b);
+}
+
+.pink{
+  background-color: #FCA300;
+}
+.pink img{
+  mix-blend-mode: darken;
+}
+.pink::after{
+  background: #282581;
+  mix-blend-mode: lighten;
+  -webkit-filter: contrast(1.1);
+  filter: contrast(1.1);
+}
+
+
+
+.yellow{
+  background-color: #e0de2c;
+}
+.yellow img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(.8);
+  filter: grayscale(100%) contrast(.8);
+}
+.yellow::after{
+  background-color: #b71310;
+  mix-blend-mode: lighten;
+}
+
+.orange{
+  background-color: #f65e35;
+}
+.orange img{
+   mix-blend-mode: multiply;
+  -webkit-filter: grayscale(100%) contrast(1.2);
+  filter: grayscale(100%) contrast(1.2);
+}
+.orange::after{
+  background-color: #1e3265;
+  mix-blend-mode: lighten;
+}
+
+.blue-red{
+  background-color: #E50914;
+}
+.blue-red img{
+  -webkit-filter: grayscale(100%) contrast(1.2);
+    filter: grayscale(100%) contrast(1.2);
+  opacity:.8;
+}
+.blue-red::after{
+   mix-blend-mode: lighten;
+    -webkit-filter: contrast(1.1);
+    filter: contrast(1.1); 
+  background-color: #282581;
+}
+
+.gold{
+  background-color: #367ABD ;
+}
+.gold img{
+   mix-blend-mode: lighten;
+  -webkit-filter: grayscale(100%) contrast(1);
+  filter: grayscale(100%) contrast(.8);
+}
+.gold::after{
+  background-color: #F9ED3A;
+  mix-blend-mode: multiply;
+}
+section{
+  display: flex;
+  width: 100%;
+}
